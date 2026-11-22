@@ -13,7 +13,7 @@ html {
   font-style: normal;
   font-variation-settings:
     "GRAD" 0;
- 
+
 }
 p {
     font-weight: 400;
@@ -215,6 +215,7 @@ align-self: flex-start;
 p{
     font-size: 1.8rem;
 } 
+
 }
 
 .hh4{
@@ -282,6 +283,7 @@ p{
     justify-content: center;
     align-items: center;
     
+    
    
 
 }
@@ -311,6 +313,9 @@ p{
     gap: 20px;
   
       
+    }
+    .home-content{
+        max-width: 80%;
     }
     .experience-content{
         max-width: 80%;

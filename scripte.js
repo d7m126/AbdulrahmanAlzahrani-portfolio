@@ -57,7 +57,7 @@ document.querySelectorAll('.navbar a[href^="#"]').forEach((link) => {
       document.querySelector("nav")?.offsetHeight || 0;
 
     window.scrollTo({
-      top: target.offsetTop - navHeight ,
+      top: target.offsetTop - navHeight +60,
       behavior: "smooth",
     });
   });
