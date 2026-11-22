@@ -34,7 +34,7 @@ a {
 
 .hh1{
    h1{
-    font-size: 2.8rem;
+    font-size: 4rem;
 }
 p{
     font-size: 2rem;
@@ -44,10 +44,10 @@ p{
 .hh4{
     
     h4{
-        font-size: 1.2em;
+        font-size: 1.3rem;
     }
     p{
-        font-size: 1em;
+        font-size: 1rem;
     }
     h4, p {
     padding-bottom:0.3rem;
@@ -183,20 +183,18 @@ align-self: flex-start;
 
 @media (max-width: 800px){
 .pagelayout{}
+
+
+}
+
+@media (max-width: 800px){
 .mainlayout{
     flex-direction: column;
 }
 .aside-card{
     position: static;
-    top:0;
-    order: 1;
+    margin-top: 50px;
     height: 100dvh;
-}
-}
-
-@media (max-width: 800px){
-.content{
-    
 }
     .pagelayout{}
 .navbar{justify-content: center;padding: 10px 10px;}
@@ -205,13 +203,14 @@ align-self: flex-start;
 .nav-group{flex-direction: column;gap: 2px;align-items: center;}
 .nav-group{display:none ;}
 .effect-wrapper{
+    
     overflow: hidden;
 }
 
 
 .hh1{
    h1{
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 p{
     font-size: 1.8rem;
