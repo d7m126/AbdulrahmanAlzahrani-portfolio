@@ -13,28 +13,16 @@ html {
   font-style: normal;
   font-variation-settings:
     "GRAD" 0;
-   border: 1px solid red;
+ 
 }
 p {
     font-weight: 400;
 }
 
-:root {
-  --bg-color: #ffffff;
-  --text-color: #111827;
-  --accent-color: #2563eb;
-}
 
-[data-theme="dark"] {
-  --bg-color: #111827;
-  --text-color: #f9fafb;
-  --accent-color: #60a5fa;
-}
+
 body{
-      background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.2s ease, color 0.2s ease;
-    
+ 
     max-width: 1200px;
     margin: 0 auto;
     
@@ -88,7 +76,7 @@ p{
 }
 
 .sidebarnav{
- img{width: 25px ;}   
+ img{ width: 25px ;}   
  display: none;
  button{
     background-color: none;
@@ -136,9 +124,9 @@ align-self: flex-start;
     padding: 15px 20px;
     background-color: #fff;
     border-radius: 10px;
-    border: 2px solid #000;
+    border: 2px solid var(--text-color);
     box-sizing: border-box;
-    box-shadow: -3px 4px 0 #000;
+    box-shadow: -3px 4px 0 var(--text-color);
 }
  .nav-group{
     display: flex;
@@ -157,9 +145,9 @@ align-self: flex-start;
     padding: 20px 35px;
     background-color: #fff;
     border-radius: 10px;
-    border: 2px solid #000;
+    border: 2px solid var(--text-color);
     box-sizing: border-box;
-    box-shadow: -3px 4px 0 #000;
+    box-shadow: -3px 4px 0 var(--text-color);
     max-width: 400px;
     gap:20px ;
     .card-text{
@@ -172,9 +160,9 @@ align-self: flex-start;
     padding: 8px 8px;
     background-color: #fff;
     border-radius: 10px;
-    border: 2px solid #000;
+    border: 2px solid var(--text-color);
     box-sizing: border-box;
-    box-shadow: -3px 4px 0 #000;
+    box-shadow: -3px 4px 0 var(--text-color);
     cursor: pointer;           /* Changes text cursor to a hand pointer */
     user-select: none;         /* Prevents highlighting the text on click */
     text-align: center;
@@ -193,10 +181,6 @@ align-self: flex-start;
 
 
 
- @media (max-width: 1000px){
-.pagelayout{}
-
-}
 @media (max-width: 800px){
 .pagelayout{}
 .mainlayout{
@@ -227,10 +211,10 @@ align-self: flex-start;
 
 .hh1{
    h1{
-    font-size: 2.8rem;
+    font-size: 4rem;
 }
 p{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 } 
 }
 
@@ -264,7 +248,7 @@ p{
         font-size: 1.5rem;
     }
     p{
-        font-size: 1.2;
+        font-size: 1.2em;
     }
 }
 } 
@@ -274,6 +258,11 @@ p{
 
 .menu-item {
     padding: 10px 20px;
+    button{
+    background-color: none;
+    background: none;
+    border: none;
+ }
 }
 
 /* JS */
@@ -304,12 +293,11 @@ p{
     align-items: center;
 }
 .menu-link.active {
-    color: #fff;
+    
     
 }
 .menu-item.active {
-    background-color: #000;
-    border-radius: 5px;
+   
 }
 
 
@@ -334,9 +322,9 @@ p{
     padding: 5px 10px;
     background-color: #fff;
     border-radius: 10px;
-    border: 2px solid #000;
+    border: 2px solid var(--text-color);
     box-sizing: border-box;
-    box-shadow: -3px 4px 0 #000;
+    box-shadow: -3px 4px 0 var(--text-color);
         .arrow-img{
         display: flex;
         justify-content: end;
@@ -366,9 +354,9 @@ p{
         .project-img{
     background-color: #fff;
     border-radius: 10px;
-    border: 2px solid #000;
+    border: 2px solid var(--text-color);
     box-sizing: border-box;
-    box-shadow: -3px 4px 0 #000;
+    box-shadow: -3px 4px 0 var(--text-color);
     width: 100px;
     height: 100px; 
    
@@ -376,3 +364,29 @@ p{
 }
 
 
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111827;
+  --accent-color: #2563eb;
+}
+
+[data-theme="dark"] {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --accent-color: #60a5fa;
+}
+*{
+    
+  background-color: var(--bg-color)!important; ;
+  color: var(--text-color)!important; ;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.menu-link.active {
+    color:var(--bg-color)!important;  
+    background-color: var(--text-color)!important;  
+}
+.menu-item.active {
+    background-color: var(--text-color)!important;  
+    border-radius: 5px;
+}
