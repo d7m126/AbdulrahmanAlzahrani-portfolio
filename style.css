@@ -90,7 +90,7 @@ p{
 }
 .mainlayout{
 display: flex;
-
+    gap: 2rem;
 }
 .aside-card{
     position: sticky;
