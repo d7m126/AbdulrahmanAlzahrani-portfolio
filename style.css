@@ -15,6 +15,24 @@ html {
     "GRAD" 0;
 
 }
+
+html[lang="ar"],
+html[lang="ar"] * {
+    font-family: "Google Sans", "Noto Sans Arabic", Arial, sans-serif;
+    font-style: normal;
+}
+
+html[lang="en"],
+html[lang="en"] * {
+    font-family: "Google Sans", Arial, sans-serif;
+    font-style: normal;
+}
+
+.lang-btn {
+    font-weight: 800;
+    letter-spacing: 0;
+}
+
 p {
     font-weight: 400;
 }
@@ -204,7 +222,7 @@ align-self: flex-start;
 .nav-group{display:none ;}
 .effect-wrapper{
     
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 

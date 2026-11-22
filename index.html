@@ -12,6 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,30 +32,34 @@
         </li>
         <div class="nav-group sidebar ">
           <li class="menu-item ">
-            <button id="theme-toggle" class="menu-link" type="button">Switch Theme</button>
+            <button id="theme-toggle" class="menu-link" type="button" data-lang="switchTheme">Switch Theme</button>
           </li>
          
         </div>
         <div class="nav-group ">
 
           <li class="menu-item  active">
-            <a href="#home" class="menu-link active">Home</a>
+            <a href="#home" class="menu-link active" data-lang="home">Home</a>
           </li>
           <li class="menu-item">
-            <a href="#experience" class="menu-link">Experience</a>
+            <a href="#experience" class="menu-link" data-lang="experience">Experience</a>
           </li>
           <li class="menu-item">
-            <a href="#projects" class="menu-link">Projects</a>
+            <a href="#projects" class="menu-link" data-lang="projects">Projects</a>
           </li>
           
 
         </div>
         <div class="nav-group sidebar">
           <li class="menu-item ">
-            <a class="menu-link ">AR</a>
+            <button type="button" class="menu-link lang-btn" data-language="ar" lang="ar" aria-label="Switch to Arabic">
+    العربية
+  </button>
           </li>
           <li class="menu-item">
-            <a class="menu-link">EN</a>
+             <button type="button" class="menu-link lang-btn" data-language="en">
+            EN
+        </button>
           </li>
         </div>
       </ul>
@@ -69,16 +74,16 @@
           <div class="card-img card-frame"><img style="background-color: #ffff    !important;;" src="contact-card-img.png" alt=""></div>
           <div class="card-text">
             <div class="hh4">
-              <h4>Computer scinece Grad</h4>
-              <p>IT guy who wants to be something important in the future</p>
+              <h4 data-lang="cardTitle">Computer scinece Grad</h4>
+              <p data-lang="cardAbout">IT guy who wants to be something important in the future</p>
             </div>
             <div class="hh5">
-              <h5>Currently:</h5>
-              <p>Web Devloper Trainee at <b style="color: blueviolet !important;">XEON</b> </p>
+              <h5 data-lang="currently">Currently:</h5>
+              <p><span data-lang="traineeRole">Web Devloper Trainee at</span> <b style="color: blueviolet !important;">XEON</b></p>
             </div>
           </div>
           <div class="card-btn">
-            <input type="button" class="contact-btn" value="Contact">
+            <input type="button" class="contact-btn" value="Contact" data-lang="contact">
           </div>
         </div>
       </aside>
@@ -88,16 +93,16 @@
       <section id="home" class="content" >
         <div class="content-frame">
           <div class="Home-header">
-             <div class="hh1"><h1>Abdulrahman Alzahrani</h1></div> 
+             <div class="hh1"><h1 data-lang="homeTitle">Abdulrahman Alzahrani</h1></div> 
           </div>
           <div class="Home-content">
             <div class="hh1" >
-              <p>Computer Science graduate with a solid foundation in Web development. Seeking a position to apply
+              <p data-lang="homeDescription">Computer Science graduate with a solid foundation in Web development. Seeking a position to apply
                 programming and problem-solving skills while contributing to innovative projects. Eager to grow in the
                 software development field and embrace new challenges to enhance expertise.
               </p>
               
-              <div data-aos="fade-left">
+              <div data-aos="fade-left" style="width: fit-content;">
 
               <a href="https://github.com/d7m126" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="100px"   viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="var(--text-color)" d="M480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 160C96 124.7 124.7 96 160 96L480 96zM319.7 160C231.3 160 160 232.2 160 320.6C160 390 204.1 447.5 263.4 469C271.8 472.1 280 466.5 280 458.1L280 433.1C275.6 435 270 436.2 265 436.2C244.4 436.2 232.2 425 223.4 404C220 395.6 216.2 390.6 209 389.6C205.3 389.3 204 387.7 204 385.8C204 382.1 210.2 379.2 216.5 379.2C225.6 379.2 233.4 384.8 241.5 396.4C247.7 405.5 254.3 409.5 262.1 409.5C269.9 409.5 274.9 406.7 282.1 399.5C287.4 394.2 291.5 389.5 295.2 386.4C253.9 381.4 224.9 351.7 224.9 313.3C224.9 297.7 230.5 280.8 239.9 269.5C235.8 259.2 236.5 237.3 241.1 228.3C253.6 226.7 270.5 233.3 280.5 242.4C292.4 238.7 304.9 236.8 320.2 236.8C335.5 236.8 348 238.7 359.3 242.1C369 233.3 386.2 226.8 398.7 228.3C403.1 236.7 403.7 258.6 399.6 269.2C409.6 281.1 414.9 297 414.9 313.3C414.9 351.7 385.8 380.8 344 386.1C354.6 393 361.8 408 361.8 425.2L361.8 457.7C361.8 467.1 369.6 472.4 379 468.6C435.6 447 479.9 390.5 479.9 320.5C479.9 232.1 408 159.9 319.6 159.9z"/></svg></a>
             </div>
@@ -108,35 +113,38 @@
       <section id="experience" class="content" >
                         <div class="content-frame" >
                             <div class="experience-header">
-                                <div class="hh1"><h1>Work Experience</h1></div>
+                                <div class="hh1"><h1 data-lang="experienceTitle">Work Experience</h1></div>
                             </div>
                             <div class="experience-content" >
                                <div class="experience-card">
-                                <div class="arrow-img"><img src="arrow-up-right-from-square-solid 1.png" alt=""></div>
+                                <div class="arrow-img">                            <svg xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="var(--text-color)" d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0-201.4 201.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3 448 192c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 96C35.8 96 0 131.8 0 176L0 432c0 44.2 35.8 80 80 80l256 0c44.2 0 80-35.8 80-80l0-80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 80c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l80 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 96z"/></svg>
+</div>
                                 <div class="experience-info hh3">
-                                    <h3>Product Analyst</h3>
-                                    <p style="font-style: italic;">2025 Jun → Jul. Tarqeem, Ryiadh</p>
-                                    <p>leveraging data insights to drive product development and enhance user experience.</p>
+                                    <h3 data-lang="analystTitle">Product Analyst</h3>
+                                    <p style="font-style: italic;" data-lang="analystDate">2025 Jun → Jul. Tarqeem, Ryiadh</p>
+                                    <p data-lang="analystDesc">leveraging data insights to drive product development and enhance user experience.</p>
                                   </div>
                                </div>
                             </div>
                             <div class="experience-content">
-                              <div data-aos="fade-up"> <div class="experience-card">
-                                <div class="arrow-img"><img src="arrow-up-right-from-square-solid 1.png" alt=""></div>
+                              <div data-aos="fade-up" style="width: fit-content;"> <div class="experience-card">
+                                <div class="arrow-img">                            <svg xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="var(--text-color)" d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0-201.4 201.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3 448 192c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 96C35.8 96 0 131.8 0 176L0 432c0 44.2 35.8 80 80 80l256 0c44.2 0 80-35.8 80-80l0-80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 80c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l80 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 96z"/></svg>
+</div>
                                 <div class="experience-info hh3">
-                                    <h3>IT Support</h3>
-                                    <p style="font-style: italic;">2025 Dec → Jan. Snood Hotels,Mecca</p>
-                                    <p>Providing technical support to end users and implemented IT solutions to improve workflow efficiency and business operations.</p>
+                                    <h3 data-lang="supportTitle">IT Support</h3>
+                                    <p style="font-style: italic;" data-lang="supportDate">2025 Dec → Jan. Snood Hotels,Mecca</p>
+                                    <p data-lang="supportDesc">Providing technical support to end users and implemented IT solutions to improve workflow efficiency and business operations.</p>
                                 </div>
                                </div></div>
                             </div>
                             <div class="experience-content">
-                              <div data-aos="fade-up"> <div class="experience-card">
-                                <div class="arrow-img"><img src="arrow-up-right-from-square-solid 1.png" alt=""></div>
+                              <div data-aos="fade-up" style="width: fit-content;"> <div class="experience-card">
+                                <div class="arrow-img">                            <svg xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="var(--text-color)" d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0-201.4 201.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3 448 192c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 96C35.8 96 0 131.8 0 176L0 432c0 44.2 35.8 80 80 80l256 0c44.2 0 80-35.8 80-80l0-80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 80c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l80 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 96z"/></svg>
+</div>
                                 <div class="experience-info hh3">
-                                    <h3>Software Developer</h3>
-                                    <p style="font-style: italic;">2026 Oct → Mar. Xeon,Dammam</p>
-                                    <p>Building innovative web applications that solve real-world problems, improve user experiences, and deliver meaningful value to businesses and communities.</p>
+                                    <h3 data-lang="developerTitle">Software Developer</h3>
+                                    <p style="font-style: italic;" data-lang="developerDate">2026 Oct → Mar. Xeon,Dammam</p>
+                                    <p data-lang="developerDesc">Building innovative web applications that solve real-world problems, improve user experiences, and deliver meaningful value to businesses and communities.</p>
                                 </div>
                                </div></div>
                             </div>
@@ -145,37 +153,40 @@
       <section id="projects" class="content" >
                         <div class="content-frame">
                             <div class="Project-header">
-                                <div class="hh1"><h1>Projects</h1></div>
+                                <div class="hh1"><h1 data-lang="projectsTitle">Projects</h1></div>
                             </div>
                             <div class="experience-content">
                                <div class="experience-card">
-                                <div class="arrow-img"><img src="arrow-up-right-from-square-solid 1.png" alt=""></div>
+                                <div class="arrow-img">                            <svg xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="var(--text-color)" d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0-201.4 201.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3 448 192c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 96C35.8 96 0 131.8 0 176L0 432c0 44.2 35.8 80 80 80l256 0c44.2 0 80-35.8 80-80l0-80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 80c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l80 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 96z"/></svg>
+</div>
                                 <div class="project-info">
                                     <div class="project-img"></div>
-                                    <div class="hh3"><h3>Project name</h3>
-                                    <p>Some key points</p></div>
+                                    <div class="hh3"><h3 data-lang="project1Title">Project name</h3>
+                                    <p data-lang="project1Desc">Some key points</p></div>
                                 </div>
                                </div>
                             </div>
                             <div class="experience-content">
                               <div class="effect-wrapper">
-                             <div data-aos="fade-right" style="width: 100%;"> <div class="experience-card">
-                                <div class="arrow-img"><img src="arrow-up-right-from-square-solid 1.png" alt=""></div>
+                             <div data-aos="fade-right" style="width: fit-content;"> <div class="experience-card">
+                                <div class="arrow-img">                            <svg xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="var(--text-color)" d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0-201.4 201.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3 448 192c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 96C35.8 96 0 131.8 0 176L0 432c0 44.2 35.8 80 80 80l256 0c44.2 0 80-35.8 80-80l0-80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 80c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l80 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 96z"/></svg>
+</div>
                                 <div class="project-info">
                                     <div class="project-img"></div>
-                                    <div class="hh3"><h3>Project name</h3>
-                                    <p>Some key points</p></div>
+                                    <div class="hh3"><h3 data-lang="project2Title">Project name</h3>
+                                    <p data-lang="project2Desc">Some key points</p></div>
                                 </div>
                                </div></div></div>
                             </div>
                             <div class="experience-content">
-                              <div class="effect-wrapper" style="width: 100%;">
+                              <div class="effect-wrapper" style="width:fit-content;">
                                <div data-aos="fade-left" ><div class="experience-card">
-                                <div class="arrow-img"><img src="arrow-up-right-from-square-solid 1.png" alt=""></div>
+                                <div class="arrow-img">                            <svg xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="var(--text-color)" d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0-201.4 201.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3 448 192c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 96C35.8 96 0 131.8 0 176L0 432c0 44.2 35.8 80 80 80l256 0c44.2 0 80-35.8 80-80l0-80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 80c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l80 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 96z"/></svg>
+</div>
                                 <div class="project-info">
                                     <div class="project-img"></div>
-                                    <div class="hh3"><h3>Project name</h3>
-                                    <p>Some key points</p></div>
+                                    <div class="hh3"><h3 data-lang="project3Title">Project name</h3>
+                                    <p data-lang="project3Desc">Some key points</p></div>
                                 </div>
                                </div></div></div>
                             </div>
